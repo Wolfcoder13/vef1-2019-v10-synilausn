@@ -4,9 +4,9 @@
   display: block;
 
   width: 100%;
-  max-width: 250px;
+  max-width: 200px;
   padding: 10px 5px;
-  margin: 0;
+  margin: 20px 0;
 
   font-family: $fonts;
   font-size: 1rem;
@@ -18,7 +18,8 @@
   cursor: pointer;
   background-color: #000;
 
-  border: 0;
+  border-color: #fff;
+  border-style: solid;
   border-radius: 5px;
 
   &--hidden {
@@ -28,5 +29,10 @@
   &--large {
     max-width: 500px;
     font-size: 2rem;
+  }
+
+  &:hover {
+    color: #000;
+    background-color: #fff;
   }
 }

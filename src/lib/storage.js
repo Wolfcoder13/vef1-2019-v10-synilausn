@@ -22,13 +22,19 @@ export function load() {
  * Vistaðar myndir með texta.
  *
  * @param {string} type image eða video
- * @param {string} mediaUrl URL á myndinni/myndbandinu
+ * @param {string} mediaUrl URL á myndinni/myndbandinu.
  * @param {string} text texti fyrir myndina/myndbandið.
+ * @param {string} title titill fyrir myndina/myndbandið.
  */
-export function save(type, mediaUrl, text) {
+export function save(type, mediaUrl, text, title) {
   const favourites = load();
 
-  favourites.push({ type, mediaUrl, text });
+  favourites.push({
+    type,
+    mediaUrl,
+    text,
+    title,
+  });
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(favourites));
 }
 

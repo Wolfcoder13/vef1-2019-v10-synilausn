@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Verkefni 10</title>
   <link rel="stylesheet" href="./dist/styles.css">
+  <title>Verkefni 10</title>
 </head>
 <body>
   <header>
       <h1>Geim myndir</h1>
-      <nav><ul><li><a href="favorites.html"></a></li></ul></nav>
   </header>
   <main>
     <section class="apod">
 
       <img class="apod__image">
+      <h2 class="apod__title"></h2>
+      <p class="apod__text"></p>
 
-      <p class="apod__text">
-      </p>
-
-      <button class="start button button--large">Sækja nýja mynd</button>
+      <button id="new-image-button" class="button button--large">Sækja nýja mynd</button>
+      <button id="save-image-button" class="button button--large">Vista mynd</button>
+      <a href="favourites.html" class="button button--large">Skoða vistaðar myndir</a>
 
 
     </section>
