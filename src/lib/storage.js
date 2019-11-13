@@ -7,7 +7,10 @@ const LOCALSTORAGE_KEY = 'favourite_spacephotos';
 
 /**
  * Sækir gögn úr localStorage. Skilað sem lista á forminu:
- * { points: <stig>, name: <nafn> }
+ * [{ type, mediaUrl, text, title },
+ *  { type, mediaUrl, text, title },
+ *  ...,
+ *  { type, mediaUrl, text, title }]
  *
  * @returns {array} fylki af myndum eða tóma fylkið ef ekkert vistað.
  */
