@@ -24,7 +24,7 @@ export function load() {
 /**
  * Vistaðar myndir með texta.
  *
- * @param {string} type image eða video
+ * @param {string} type annað hvort image eða video
  * @param {string} mediaUrl URL á myndinni/myndbandinu.
  * @param {string} text texti fyrir myndina/myndbandið.
  * @param {string} title titill fyrir myndina/myndbandið.
@@ -43,7 +43,7 @@ export function save(type, mediaUrl, text, title) {
 
 
 /**
- * Hreinsa öll stig úr localStorage
+ * Hreinsar allar myndir úr localStorage
  */
 export function clear() {
   localStorage.removeItem(LOCALSTORAGE_KEY);
