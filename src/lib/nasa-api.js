@@ -1,4 +1,4 @@
-import { randomNumber } from './helpers';
+import { getRandomDate } from './helpers';
 
 /**
  * Sækir Myndir frá nasa API. Til þess að sjá dæmi um json svari sjá apod.json
@@ -16,9 +16,11 @@ const URL = 'https://api.nasa.gov/planetary/apod';
  * @returns {Promise} sem mun innihalda upplýsingar um mynd/myndband hjá nasa.
  */
 export default async function getRandomImage() {
-  const randomDate = `${randomNumber(1996, 2019)}-${randomNumber(1, 12)}-${randomNumber(1, 28)}`;
+  const randomDate = getRandomDate(new Date(1995, 5, 16, 0, 0, 0), new Date());
 
-  const response = await fetch(`${URL}?api_key=${API_KEY}&date=${randomDate}`);
+  const formattedDate = `${randomDate.getFullYear()}-${randomDate.getMonth() + 1}-${randomDate.getDate()}`;
+
+  const response = await fetch(`${URL}?api_key=${API_KEY}&date=${formattedDate}`);
 
   const json = await response.json();
 
